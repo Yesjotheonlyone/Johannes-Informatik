@@ -12,8 +12,9 @@ public class Main {
         //bgh.fuehreAnimationAus();
         //BasketballWurf bw = new BasketballWurf();
         //bw.fuehreAus();
-
-        ErstesDaumenKino eSD = new ErstesDaumenKino();
-        eSD.sichtbarness();
+        //ErstesDaumenKino eSD = new ErstesDaumenKino();
+        //eSD.sichtbarness();
+        EigenesMalprogramm eMP = new EigenesMalprogramm();
+        eMP.stiftFolgtMaus();
     }
 }

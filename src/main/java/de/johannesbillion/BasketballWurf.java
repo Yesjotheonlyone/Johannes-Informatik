@@ -32,7 +32,7 @@ public class BasketballWurf {
         }
 
         public void wurfNachLinks() {
-            while (ball.hPosition() < 0) {
+            while (ball.hPosition() > 0) {
                 ball.setzePosition(ball.hPosition() + 0.001, ball.vPosition());
             }
         }

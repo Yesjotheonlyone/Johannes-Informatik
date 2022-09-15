@@ -154,7 +154,6 @@ public class BilderGalerieHampelmann {
         b4.setzeSichtbar(true);
         Hilfe.pause(1000);
     }
-
     public void animiereEinMal() {
         b4.setzeSichtbar(false);
         b1.setzeSichtbar(true);
@@ -171,7 +170,6 @@ public class BilderGalerieHampelmann {
     }
     public void fuehreAnimationAus() {
         while (x<5)
-
             this.zeigeVon1bis4();
         x++;
     }
