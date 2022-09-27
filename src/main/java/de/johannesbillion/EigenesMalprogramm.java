@@ -2,9 +2,10 @@ package de.johannesbillion;
 
 import basis.*;
 
+import javax.swing.*;
+
 public class EigenesMalprogramm {
     Fenster f = new Fenster();
-    Knopf kEnde = new Knopf("Ende", 350, 270, 40, 25);
     Maus m;
     IgelStift s = new IgelStift();
     public void stiftFolgtMaus(){
@@ -81,5 +82,15 @@ public class EigenesMalprogramm {
 
             }
         });
+    }
+    public void addGUI(){
+        JFrame jFrame = new JFrame("Bedienungsfenster");
+        jFrame.setSize(200, 200);
+
+        JButton allesLöschen = new JButton("Alles Löschen");
+        allesLöschen.addAncestorListener(e -> f.loescheAlles());
+
+        jFrame.getContentPane().add(allesLöschen);
+        jFrame.setVisible(true);
     }
 }
