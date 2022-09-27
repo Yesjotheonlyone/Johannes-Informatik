@@ -15,8 +15,6 @@ public class EigenesMalprogramm {
 
     private MausLauscherStandard mausLauscher;
 
-    private MausLauscherStandard radiererLauscher;
-
     //Konstruktor
     public EigenesMalprogramm() {
         //GUI-starten
