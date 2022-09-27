@@ -102,4 +102,11 @@ public class EigenesMalprogramm {
         //Sichtbarkeit
         jFrame.setVisible(true);
     }
+
+    //TODO: Farbauswahl
+    // - String Array mit verschiedenen Farben (z.B String[] colors = {"Blau", "Grün", "Rot"})
+    // - JComboBox mit den Farben (z.B JComboBox<String> colorBox = new JComboBox<>(colors))
+    // - JComboBox mit ActionListener und IF-Abfragen (z.B if(colorBox.getSelectedItem().equals("Blau")) {s.setzeFarbe("Blau");})
+    // - JComboBox in GUI einfügen (z.B jFrame.getContentPane().add(colorBox))
+
 }
