@@ -17,6 +17,7 @@ public class EigenesMalprogramm {
     public EigenesMalprogramm() {
         //GUI-starten
         this.addGUI();
+        this.addTastaturListener();
     }
     //Methode zum Hinzufügen des MausLauschers zum Fenster
     public void addTastaturListener() {
