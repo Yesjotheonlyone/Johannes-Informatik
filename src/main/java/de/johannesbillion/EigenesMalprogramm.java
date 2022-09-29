@@ -1,32 +1,46 @@
 package de.johannesbillion;
 
-import basis.Fenster;
-import basis.IgelStift;
-import basis.Maus;
-import basis.MausLauscherStandard;
+import basis.*;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class EigenesMalprogramm {
     Fenster f = new Fenster();
-    Maus m;
+    Tastatur tastatur = new Tastatur();
     IgelStift s = new IgelStift();
 
-    private MausLauscherStandard mausLauscher;
+    public MausLauscherStandard mausLauscher;
+    public TastenLauscher tastenLauscher;
 
-    //Konstruktor
+
     public EigenesMalprogramm() {
         //GUI-starten
         this.addGUI();
     }
-
     //Methode zum Hinzufügen des MausLauschers zum Fenster
+    public void addTastaturListener() {
+        tastenLauscher = this.getTastenLauscher();
+        f.setzeTastenLauscher(tastenLauscher);
+    }
     public void addMouseListener() {
         mausLauscher = this.getMouseListener();
         f.setzeMausLauscherStandard(mausLauscher);
     }
 
+    public TastenLauscher getTastenLauscher() {
+        return new TastenLauscher() {
+            @Override
+            public void bearbeiteTaste(Komponente komponente, char c) {
+                switch(c){
+                    case 'w': s.setzeFarbe(Farbe.GRUEN);
+                        break;
+                    default:
+            }
+        }
+    };
+
+}
     //Funktion zum Erzeugen des allgemeinen Maus-Listeners
     private MausLauscherStandard getMouseListener() {
         return new MausLauscherStandard() {
