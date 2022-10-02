@@ -13,17 +13,18 @@ public class EigenesMalprogramm {
     public MausLauscherStandard mausLauscher;
     public TastenLauscher tastenLauscher;
 
-
     public EigenesMalprogramm() {
         //GUI-starten
         this.addGUI();
         this.addTastaturListener();
     }
+
     //Methode zum Hinzufügen des MausLauschers zum Fenster
     public void addTastaturListener() {
         tastenLauscher = this.getTastenLauscher();
         f.setzeTastenLauscher(tastenLauscher);
     }
+
     public void addMouseListener() {
         mausLauscher = this.getMouseListener();
         f.setzeMausLauscherStandard(mausLauscher);
@@ -33,15 +34,24 @@ public class EigenesMalprogramm {
         return new TastenLauscher() {
             @Override
             public void bearbeiteTaste(Komponente komponente, char c) {
-                switch(c){
-                    case 'w': s.setzeFarbe(Farbe.GRUEN);
+                switch (c) {
+                    case 's':
+                        s.setzeFarbe(Farbe.SCHWARZ);
                         break;
+                    case 'g':
+                        s.setzeFarbe(Farbe.GRUEN);
+                        break;
+                    case 'o':
+                        s.setzeFarbe(Farbe.ORANGE);
+                        break;
+                    case 'r':
+                        s.setzeFarbe(Farbe.ROT);
                     default:
+                }
             }
-        }
-    };
+        };
+    }
 
-}
     //Funktion zum Erzeugen des allgemeinen Maus-Listeners
     private MausLauscherStandard getMouseListener() {
         return new MausLauscherStandard() {
@@ -72,7 +82,6 @@ public class EigenesMalprogramm {
 
             @Override
             public void bearbeiteMausGezogen(Object o, int i, int i1) {
-
             }
         };
     }
@@ -115,6 +124,7 @@ public class EigenesMalprogramm {
         //Bildschirmposition
         jFrame.setLocationRelativeTo(null);
         //Sichtbarkeit
+
         jFrame.setVisible(true);
     }
 
