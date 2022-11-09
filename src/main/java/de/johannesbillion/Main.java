@@ -14,6 +14,8 @@ public class Main {
         //bw.fuehreAus();
         //ErstesDaumenKino eSD = new ErstesDaumenKino();
         //eSD.sichtbarness();
-        EigenesMalprogramm eMP = new EigenesMalprogramm();
+        //EigenesMalprogramm eMP = new EigenesMalprogramm();
+
+
     }
 }
