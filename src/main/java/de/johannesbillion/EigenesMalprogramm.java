@@ -4,6 +4,8 @@ import basis.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class EigenesMalprogramm {
     Fenster f = new Fenster();
@@ -17,6 +19,7 @@ public class EigenesMalprogramm {
         //GUI-starten
         this.addGUI();
         this.addTastaturListener();
+
     }
 
     //Methode zum Hinzufügen des MausLauschers zum Fenster
@@ -42,7 +45,7 @@ public class EigenesMalprogramm {
                         s.setzeFarbe(Farbe.GRUEN);
                         break;
                     case 'o':
-                        s.setzeFarbe(Farbe.ORANGE);
+                    s.setzeFarbe(Farbe.ORANGE);
                         break;
                     case 'r':
                         s.setzeFarbe(Farbe.ROT);
@@ -91,6 +94,7 @@ public class EigenesMalprogramm {
         //Fenster mit Attributen
         JFrame jFrame = new JFrame("Bedienungsfenster");
         jFrame.setSize(200, 200);
+        jFrame.getContentPane().add();
 
         //Löschen-Knopf
         JButton allesLoeschen = new JButton("Alles Löschen");
@@ -117,6 +121,7 @@ public class EigenesMalprogramm {
                 zeichenToggle.setText("Zeichenmodus ein");
             }
         });
+
         jFrame.getContentPane().add(zeichenToggle);
 
         //Layout
@@ -127,6 +132,26 @@ public class EigenesMalprogramm {
 
         jFrame.setVisible(true);
     }
+
+
+    //Setze String Array
+    String[] figuren = {"Kreis", "Haus", "Baum"};
+
+    public figurenAuswahl(){
+
+        JComboBox<String> colorBox = new JComboBox<>(figuren);
+
+        ActionListener figurenListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (colorBox.getSelectedItem().equals("Kreis")){
+                    s.zeichneKreis();
+            }
+        }
+
+        }
+
+        //Initialisierung Elemente
 
     //TODO: Farbauswahl
     // - String Array mit verschiedenen Farben (z.B String[] colors = {"Blau", "Grün", "Rot"})

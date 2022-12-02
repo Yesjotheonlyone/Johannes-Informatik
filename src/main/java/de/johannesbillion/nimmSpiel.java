@@ -27,6 +27,7 @@ public class nimmSpiel {
     public void ausfuehren(int minusAnzahl) {
         punkteaktuell -= minusAnzahl;
         this.gewinner();
+        this.spielerWechsel();
         b3.setzeText("Anzahl der Hölzer " + punkteaktuell);
     }
     public void gewinner(){
@@ -37,6 +38,15 @@ public class nimmSpiel {
             else {
                 b2.setzeText("Spieler 2 hat verloren");
             }
+        }
+    }
+    public void spielerWechsel(){
+        if (Spieler1){
+            b1.setzeText("Spieler 1");
+            Spieler1 = false;
+        } else {
+            b1.setzeText("Spieler 2");
+            Spieler1 = true;
         }
     }
 }
