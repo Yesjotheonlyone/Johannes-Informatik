@@ -15,7 +15,9 @@ public class Main {
         //ErstesDaumenKino eSD = new ErstesDaumenKino();
         //eSD.sichtbarness();
         //EigenesMalprogramm eMP = new EigenesMalprogramm();
-
+        //Test te = new Test();
+                //te.ausgabe();
+        nimmSpiel nS = new nimmSpiel();
 
     }
 }

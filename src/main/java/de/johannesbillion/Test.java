@@ -9,8 +9,8 @@ public class Test {
     private ZahlenFeld zahl;
     private BeschriftungsFeld punkte, anzeige, gewürfelt;
     private Knopf ende, wuerfel, neu;
-    private int eingabeZahl, punkteSp1, w1, w2, w3;
-    private boolean spieler;
+    private int eingabeZahl, punkteSp1, punkteSp2, w1, w2, w3, punkteAktuell;
+    private boolean spieler1;
 
     public void Wuerfel() {
         fenster = new Fenster(500, 500);
@@ -26,8 +26,10 @@ public class Test {
         w1 = 0;
         w2 = 0;
         w3 = 0;
-
+        punkteAktuell=0;
         wuerfel.setzeKnopfLauscher(knopf -> this.ausgabe());
+
+        spieler1 = true;
 
     }
 
@@ -35,6 +37,9 @@ public class Test {
         eingabeZahl = zahl.ganzZahl();
         punkteSp1 = eingabeZahl;
         this.wuerfeln();
+        this.auswerten();
+        this.punkte();
+        spieler1=!spieler1;
         System.out.println("Ergebnis: Spieler 1 hat"+eingabeZahl+" mal gewürfelt. Er hat die Zahlen: "+w1+","+w2+","+w3+"gewürfelt. Er hat "+punkteSp1+" Punkte erzielt." );
     }
 
@@ -52,7 +57,15 @@ public class Test {
     }
     public void auswerten(){
         if (w1==w2 || w2==w3 || w3==w1){
-            punkteSp1=0;
+            punkteAktuell=0;
+        }
+    }
+    public void punkte(){
+        if (spieler1=true){
+            punkteSp1=punkteSp1+punkteAktuell;
+        }
+        else{
+            punkteSp2=punkteSp2+punkteAktuell;
         }
     }
 }

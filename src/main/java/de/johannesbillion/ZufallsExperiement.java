@@ -6,7 +6,7 @@ public class ZufallsExperiement {
 
     Fenster f;
     BeschriftungsFeld titel, frage, antwort, spielbeschreibung;
-    ZahlenFeld Eingabe;
+    ZahlenFeld eingabe;
     Integer zufallsZahl, rateZahl;
     TextFeld kommentar;
     Knopf ende, neu;
@@ -28,7 +28,7 @@ public class ZufallsExperiement {
         rateZahl = 0;
     }
     private void raten(){
-        rateZahl =  Eingabe.ganzZahl()
+        rateZahl =  eingabe.ganzZahl();
         if (rateZahl == zufallsZahl){
 
         }
