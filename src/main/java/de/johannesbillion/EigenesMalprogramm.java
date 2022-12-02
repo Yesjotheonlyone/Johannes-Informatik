@@ -94,7 +94,7 @@ public class EigenesMalprogramm {
         //Fenster mit Attributen
         JFrame jFrame = new JFrame("Bedienungsfenster");
         jFrame.setSize(200, 200);
-        jFrame.getContentPane().add();
+        //jFrame.getContentPane().add();
 
         //Löschen-Knopf
         JButton allesLoeschen = new JButton("Alles Löschen");
@@ -137,26 +137,27 @@ public class EigenesMalprogramm {
     //Setze String Array
     String[] figuren = {"Kreis", "Haus", "Baum"};
 
-    public figurenAuswahl(){
+    public void figurenAuswahl() {
 
         JComboBox<String> colorBox = new JComboBox<>(figuren);
 
         ActionListener figurenListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (colorBox.getSelectedItem().equals("Kreis")){
-                    s.zeichneKreis();
+                if (colorBox.getSelectedItem().equals("Kreis")) {
+                    //s.zeichneKreis();
+                }
             }
-        }
 
-        }
+        };
 
         //Initialisierung Elemente
 
-    //TODO: Farbauswahl
-    // - String Array mit verschiedenen Farben (z.B String[] colors = {"Blau", "Grün", "Rot"})
-    // - JComboBox mit den Farben (z.B JComboBox<String> colorBox = new JComboBox<>(colors))
-    // - JComboBox mit ActionListener und IF-Abfragen (z.B if(colorBox.getSelectedItem().equals("Blau")) {s.setzeFarbe("Blau");})
-    // - JComboBox in GUI einfügen (z.B jFrame.getContentPane().add(colorBox))
+        //TODO: Farbauswahl
+        // - String Array mit verschiedenen Farben (z.B String[] colors = {"Blau", "Grün", "Rot"})
+        // - JComboBox mit den Farben (z.B JComboBox<String> colorBox = new JComboBox<>(colors))
+        // - JComboBox mit ActionListener und IF-Abfragen (z.B if(colorBox.getSelectedItem().equals("Blau")) {s.setzeFarbe("Blau");})
+        // - JComboBox in GUI einfügen (z.B jFrame.getContentPane().add(colorBox))
 
+    }
 }
