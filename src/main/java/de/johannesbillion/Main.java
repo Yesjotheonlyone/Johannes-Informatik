@@ -17,7 +17,8 @@ public class Main {
         //EigenesMalprogramm eMP = new EigenesMalprogramm();
         //Test te = new Test();
                 //te.ausgabe();
-        nimmSpiel nS = new nimmSpiel();
+        //nimmSpiel nS = new nimmSpiel();
+        array array = new array();
 
     }
 }
