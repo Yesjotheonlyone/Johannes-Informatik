@@ -1,4 +1,4 @@
-package de.johannesbillion;
+package de.johannesbillion.drawing;
 
 import basis.*;
 

@@ -1,10 +1,17 @@
-package de.johannesbillion;
+package de.johannesbillion.arrayExercises;
 
 import basis.*;
 import javax.swing.*;
 import java.util.Arrays;
 
-public class array {
+public class Array {
+
+    //Code um Klasse direkt hier ausführbar zu machen
+    public static void main(String[] args) {
+        new Array();
+    }
+
+    //Variablen
     public Fenster fenster;
     public String[] tiere;
     public BeschriftungsFeld b1, b2;
@@ -13,7 +20,7 @@ public class array {
 
     public ZahlenFeld eingabeAnzahl;
 
-    public array(){
+    public Array(){
         fenster = new Fenster("Arrays", 500, 500);
         b1 = new BeschriftungsFeld("", 100, 100, 300, 20);
         b2 = new BeschriftungsFeld("Wie viel Tiere möchten Sie eingeben?", 100, 250, 300, 20);
@@ -25,28 +32,6 @@ public class array {
         //ok.setzeKnopfLauscher(knopf -> eingabeTiere());
 
 
-    }
-    public void sortingArray(){
-        for (int i = 0; i < 100; i++) {
-            intArr[i] = Hilfe.zufall(0,100);
-            intArr[i] = Integer.parseInt(JOptionPane.showInputDialog(i));
-        }
-        System.out.println(intArr);
-        //this.bubblesort();
-    }
-    public void swap(int i, int i1){
-        int temp = intArr[i];
-        intArr[i] = intArr[i1];
-        intArr[i1] = temp;
-    }
-    public void bubblesort(){
-        for (int i = intArr.length; i >1 ; --i) {
-            for (int j = 0; j < i-1; j++) {
-                if (intArr[i]>intArr [+ 1]){
-                    swap(j, j+1);
-                }
-            }
-        }
     }
     public void ausfuehren(){
         tiere = new String[3];

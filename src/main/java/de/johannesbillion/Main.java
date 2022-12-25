@@ -1,5 +1,8 @@
 package de.johannesbillion;
 
+import de.johannesbillion.arrayExercises.Sort;
+import de.johannesbillion.drawing.EKlasse;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -20,7 +23,10 @@ public class Main {
         //nimmSpiel nS = new nimmSpiel();
         //array array = new array();
         //array.sortingArray();
-        bubblesort bubblesort= new bubblesort();
-        bubblesort.numbers();
+
+        //Das ist quatsch! Allerhöchstens so:
+        //Sort sort = new Sort();
+        //eigentlich so
+        new Sort();
     }
 }
