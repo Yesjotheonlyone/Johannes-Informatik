@@ -6,17 +6,12 @@ public class Sort {
 
     //Code um Klasse direkt hier ausführbar zu machen
     public static void main(String[] args) {
-        new Sort();
+        Sort sort = new Sort();
     }
-
     //Variablen
     public Fenster fenster;
-    public String[] tiere;
-    public BeschriftungsFeld b1, b2;
-    public Knopf ok;
+    public Stift pencil = new Stift();
     int[] intArr = new int[100];
-
-    public ZahlenFeld eingabeAnzahl;
 
     public Sort(){
         //Anzeige Fenster
@@ -24,17 +19,20 @@ public class Sort {
 
         //Initialisierung des Arrays in den Konstruktor verschoben
         for (int i = 0; i < intArr.length; i++) {
-            intArr[i] = Hilfe.zufall(0,100);
+            intArr[i] = Hilfe.zufall(0,100);{
+                this.bubblesort();
+            }
+            this.drawArray();
+            Hilfe.pause(4);
             //Das ist quatsch, es sollen ja Zufallszahlen sein
             //intArr[i] = Integer.parseInt(JOptionPane.showInputDialog(i));
         }
 
         //Methode zum Zeichen des Arrays
-
-        drawArray();
-
+        this.drawArray();
+        Hilfe.pause(50);
         //Starten der Sortiermethode
-        this.bubblesort();
+
     }
 
 
@@ -59,7 +57,13 @@ public class Sort {
 
     //Überlege dir hier einmal eine Methode, um das Array zeichnen zu lassen
     public void drawArray() {
-        //Hier zeichnest du das Array
+        fenster.loescheAlles();
+        for (int i = 0; i < intArr.length; i++) {
+            pencil.bewegeBis(20+i*3,200);
+            pencil.runter();
+            pencil.setzeLinienBreite(2);
+            pencil.hoch();
+        }
     }
 
 }

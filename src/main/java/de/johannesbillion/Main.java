@@ -27,6 +27,6 @@ public class Main {
         //Das ist quatsch! Allerhöchstens so:
         //Sort sort = new Sort();
         //eigentlich so
-        new Sort();
+        //Sort sort = new Sort();
     }
 }
