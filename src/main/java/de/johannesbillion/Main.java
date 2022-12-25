@@ -18,7 +18,9 @@ public class Main {
         //Test te = new Test();
                 //te.ausgabe();
         //nimmSpiel nS = new nimmSpiel();
-        array array = new array();
-
+        //array array = new array();
+        //array.sortingArray();
+        bubblesort bubblesort= new bubblesort();
+        bubblesort.numbers();
     }
 }

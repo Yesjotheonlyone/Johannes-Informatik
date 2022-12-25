@@ -9,6 +9,7 @@ public class array {
     public String[] tiere;
     public BeschriftungsFeld b1, b2;
     public Knopf ok;
+    int[] intArr = new int[100];
 
     public ZahlenFeld eingabeAnzahl;
 
@@ -20,11 +21,33 @@ public class array {
         eingabeAnzahl = new ZahlenFeld(100, 300, 100, 20);
         //eingabeTiere.setzeTextFeldLauscher();
 
-        ok = new Knopf("OK", 100, 300, 70, 30);
-        ok.setzeKnopfLauscher(knopf -> eingabeTiere());
+        ok = new Knopf("OK", 100, 350, 70, 30);
+        //ok.setzeKnopfLauscher(knopf -> eingabeTiere());
+
 
     }
-
+    public void sortingArray(){
+        for (int i = 0; i < 100; i++) {
+            intArr[i] = Hilfe.zufall(0,100);
+            intArr[i] = Integer.parseInt(JOptionPane.showInputDialog(i));
+        }
+        System.out.println(intArr);
+        //this.bubblesort();
+    }
+    public void swap(int i, int i1){
+        int temp = intArr[i];
+        intArr[i] = intArr[i1];
+        intArr[i1] = temp;
+    }
+    public void bubblesort(){
+        for (int i = intArr.length; i >1 ; --i) {
+            for (int j = 0; j < i-1; j++) {
+                if (intArr[i]>intArr [+ 1]){
+                    swap(j, j+1);
+                }
+            }
+        }
+    }
     public void ausfuehren(){
         tiere = new String[3];
 
