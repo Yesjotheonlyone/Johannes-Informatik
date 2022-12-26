@@ -8,48 +8,65 @@ public class Sort {
     public static void main(String[] args) {
         Sort sort = new Sort();
     }
+
     //Variablen
-    public Fenster fenster;
-    public Stift pencil = new Stift();
+    Fenster fenster;
+    Stift pencil;
     int[] intArr = new int[100];
 
-    public Sort(){
+    public Sort() {
         //Anzeige Fenster
         fenster = new Fenster("Arrays", 500, 500);
+        pencil = new Stift();
 
         //Initialisierung des Arrays in den Konstruktor verschoben
         for (int i = 0; i < intArr.length; i++) {
-            intArr[i] = Hilfe.zufall(0,100);{
-                this.bubblesort();
-            }
-            this.drawArray();
-            Hilfe.pause(4);
-            //Das ist quatsch, es sollen ja Zufallszahlen sein
-            //intArr[i] = Integer.parseInt(JOptionPane.showInputDialog(i));
+            intArr[i] = Hilfe.zufall(0, 100);
         }
 
         //Methode zum Zeichen des Arrays
         this.drawArray();
         Hilfe.pause(50);
-        //Starten der Sortiermethode
 
+
+        //Starten der Sortiermethode
+        this.bubblesort();
+
+        //this.selectionSort
     }
 
 
-
     //Die Methode hast du aus dem Internet, oder?
-    public void bubblesort(){
-        for (int i = intArr.length; i >1 ; --i) {
-            for (int j = 0; j < i-1; j++) {
-                if (intArr[i]>intArr [+ 1]){
-                    swap(j, j+1);
+    public void bubblesort() {
+
+        for (int i = 0; i < intArr.length; i++) {
+            //Bsp. die erste Zahl im Array ist 5
+
+            //Vergleich der ersten Zahl im Array mit jeder anderen Zahl - Durchschieben der Zahl bis irgendwas größer ist
+            for (int j = 0; j < intArr.length; j++) {
+
+                //Vergleich zwischen Zahlen
+                if (intArr[i] < intArr[j]) {
+                    //Tausch wenn größer/kleiner
+                    swap(i, j);
                 }
             }
-            //Zeichnen des Arrays nach jedem Durchlauf
+
+            this.drawArray();
+            Hilfe.pause(100);
         }
+
     }
-    //Die Methode hast du aus dem Internet, oder?
-    public void swap(int i, int i1){
+
+    public void selectionSort() {
+
+        //For-I Schleife
+        //-- Sortiermethoden-Dings
+
+        //Immer am Ende der Schleife -> drawArray() & Hilfe.pause
+    }
+
+    public void swap(int i, int i1) {
         int temp = intArr[i];
         intArr[i] = intArr[i1];
         intArr[i1] = temp;
@@ -59,9 +76,9 @@ public class Sort {
     public void drawArray() {
         fenster.loescheAlles();
         for (int i = 0; i < intArr.length; i++) {
-            pencil.bewegeBis(20+i*3,200);
+            pencil.bewegeBis(20 + i * 3, 200);
             pencil.runter();
-            pencil.setzeLinienBreite(2);
+            pencil.zeichneRechteck(2,intArr[i]);
             pencil.hoch();
         }
     }
