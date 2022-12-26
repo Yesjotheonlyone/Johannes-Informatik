@@ -30,7 +30,7 @@ public class Sort {
 
 
         //Starten der Sortiermethode
-        this.bubblesort();
+        this.insertionsort();
 
         //this.selectionSort
     }
@@ -39,7 +39,7 @@ public class Sort {
     //Die Methode hast du aus dem Internet, oder?
     public void bubblesort() {
 
-        for (int i = 0; i < intArr.length; i++) {
+        for (int i = 0; i < intArr.length ; i++) {
             //Bsp. die erste Zahl im Array ist 5
 
             //Vergleich der ersten Zahl im Array mit jeder anderen Zahl - Durchschieben der Zahl bis irgendwas größer ist
@@ -59,11 +59,23 @@ public class Sort {
     }
 
     public void selectionSort() {
-
+        for (int i = 0; i < intArr.length; i++) {
+            for (int j = i + 1; j < intArr.length; j++) {
+                if (intArr[i] > intArr[j]){
+                    swap(i,j);
+            }
+        }
+        }
         //For-I Schleife
         //-- Sortiermethoden-Dings
-
+        this.drawArray();
+        Hilfe.pause(100);
         //Immer am Ende der Schleife -> drawArray() & Hilfe.pause
+    }
+    public void insertionsort() {
+        for (int i = 1; i < intArr.length; i++) {
+
+        }
     }
 
     public void swap(int i, int i1) {
