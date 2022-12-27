@@ -25,13 +25,14 @@ public class Sort {
         }
 
         //Methode zum Zeichen des Arrays
+
         this.drawArray();
         Hilfe.pause(50);
 
 
         //Starten der Sortiermethode
-        this.insertionsort();
 
+        this.insertionsort();
         //this.selectionSort
     }
 
@@ -72,10 +73,19 @@ public class Sort {
         Hilfe.pause(100);
         //Immer am Ende der Schleife -> drawArray() & Hilfe.pause
     }
-    public void insertionsort() {
+    public static int [] insertionsort(int[] intArr) {
+        int [] sorted = insertionsort(intArr);
+        int copy;
         for (int i = 1; i < intArr.length; i++) {
-
+        copy = sorted [i] ;
+        int j = i;
+        while (j > 0 && sorted [j - 1] > copy) {
+            sorted [j] = sorted[ j - 1];
+            j--;
         }
+        sorted [j] = copy;
+        }
+        return  sorted;
     }
 
     public void swap(int i, int i1) {
