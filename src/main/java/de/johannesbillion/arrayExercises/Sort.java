@@ -29,11 +29,9 @@ public class Sort {
         this.drawArray();
         Hilfe.pause(50);
 
-
         //Starten der Sortiermethode
+        this.bubblesort();
 
-        this.insertionsort();
-        //this.selectionSort
     }
 
 
@@ -104,5 +102,7 @@ public class Sort {
             pencil.hoch();
         }
     }
+
+
 
 }
