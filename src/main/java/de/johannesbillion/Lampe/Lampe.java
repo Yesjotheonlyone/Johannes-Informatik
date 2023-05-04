@@ -7,26 +7,22 @@ import java.awt.*;
 
 public class Lampe {
 
-    public static void main(String[] args) {
-        new Lampe();
-    }
-
     private Stift s1 = new Stift();
-    int xwert, ywert, zwert;
+    int xwert, ywert, zradius;
 
-    private void zeichneLampe(int x, int y, int z){
+    public void zeichneLampe(int x, int y, int z){
         xwert=x;
         ywert=y;
-        zwert=z;
+        zradius=z;
             s1.normal();
         s1.setzeFuellMuster(Muster.GEFUELLT);
-        s1.setzeFarbe(Color.cyan);
-        s1.kreis(xwert, ywert, zwert);
+        s1.setzeFarbe(Color.YELLOW);
+        s1.kreis(xwert, ywert, zradius);
     }
     public void loeschen(){
         s1.setzeFuellMuster(Muster.GEFUELLT);
         s1.radiere();
-        s1.kreis(xwert, ywert, zwert+1);
+        s1.kreis(xwert, ywert, zradius+1);
     }
     /*public void setzePosition(int x, int y){
         this.loeschen();
