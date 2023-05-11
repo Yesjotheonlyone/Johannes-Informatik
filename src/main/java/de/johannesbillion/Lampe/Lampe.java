@@ -10,6 +10,12 @@ public class Lampe {
     private Stift s1 = new Stift();
     int xwert, ywert, zradius;
 
+    public Lampe() {
+    }
+
+    public Lampe(int i, int i1) {
+    }
+
     public void zeichneLampe(int x, int y, int z){
         xwert=x;
         ywert=y;
@@ -49,4 +55,11 @@ public class Lampe {
         ywert;
         this.zeichneLampe(xwert, ywert, zwert);
     }*/
+    public void anAus(){
+        for (int a = 0; a < 7; a++) {   //Spalte
+            for (int i = 0; i < 7; i++) {   //Kreise in einer Spalte
+
+            }
+        }
+    }
 }
